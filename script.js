@@ -26,6 +26,7 @@ function writePassword() {
   passwordText.value = password;
 
 } */
+
 generateEl.addEventListener("click", () => {
     const criteriaSect = document.getElementById('criteria');
     if (criteriaSect.style.display !== 'block') {
@@ -35,6 +36,7 @@ generateEl.addEventListener("click", () => {
         criteriaSect.style.display = "none";
     }
 });
+
 // Add event listener to generate button
 submitEl.addEventListener("click", () =>  {
   const length = +passwordLengthEl.value;
@@ -59,6 +61,10 @@ function generatePassword(lower, upper, number, specialChar, length) {
   (item => Object.values(item)[0]);
 
   console.log(typesArr);
+
+  if(length < 8 || length > 128) {
+    return "";
+  }
 
   if(typesCount === 0) {
     return "";
