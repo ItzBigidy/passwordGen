@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+
+        <section class="card-footer">
+          
+            <button id="generate" class="btn">Generate Password</button>
+            <form id="criteria">
+              <div>
+                <label for="passwordLength" class="label">passwordLength</label>
+                <input type="text" id="passwordLength" placeholder="8-128 characters" class="input">
+              </div>
+              <div>
+                <label for="upperCase" class="label">upperCase</label>
+                <input type="checkbox" class="input" id="upperCase" class="input">
+              </div>
+              <div>
+                <label for="lowerCase" class="label">lowerCase</label>
+                <input type="checkbox" class="input" id="lowerCase" class="input">
+              </div>
+              <div>
+                <label for="numbers" class="label">numbers</label>
+                <input type="checkbox" class="input" id="numbers" class="input">
+              </div>
+              <div>
+                <label for="specialChar" class="label">specialCharacaters</label>
+                <input type="checkbox" class="input" id="specialChar" class="input">
+              </div>
+            </form>
+        </section>
+      </div> 
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
