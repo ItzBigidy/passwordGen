@@ -63,13 +63,14 @@ header {
   align-items: center;
 }
 
-
 #generate { 
   width: 48%;
+  
 }
 
 #criteria {
   display: flex;
+  display: none;
   flex-direction: column;
   text-align: right;
 }
@@ -103,7 +104,23 @@ header {
   font-size: 22px;
   line-height: 22px;
   margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
+  padding: 14px 28px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#submit {
+  border: none;
+  background-color: hsl(360, 91%, 36%);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+    0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 6px 18px;
   text-align: center;
   cursor: pointer;
 }
@@ -141,8 +158,14 @@ button[disabled] {
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
-    margin: 16px 0px 0px 0px;
+    margin: 16px;
     padding: 10px 15px;
+  }
+
+  #submit {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 4px 15px;
   }
 
   #password {
@@ -150,8 +173,4 @@ button[disabled] {
   }
 }
 
-@media (max-width: 500px) {
-  .btn {
-    font-size: 0.8rem;
-  }
-}
+

@@ -1,6 +1,7 @@
 // DOM Elements
 const passwordEl = document.getElementById('password');
 const generateEl = document.getElementById('generate');
+const submitEl = document.getElementById('submit');
 const upperCaseEl = document.getElementById('upperCase');
 const lowerCaseEl = document.getElementById('lowerCase');
 const numbersEl = document.getElementById('numbers');
@@ -25,9 +26,17 @@ function writePassword() {
   passwordText.value = password;
 
 } */
-
+generateEl.addEventListener("click", () => {
+    const criteriaSect = document.getElementById('criteria');
+    if (criteriaSect.style.display !== 'block') {
+        criteriaSect.style.display = 'block' 
+    }
+    else {
+        criteriaSect.style.display = "none";
+    }
+});
 // Add event listener to generate button
-generateEl.addEventListener("click", () =>  {
+submitEl.addEventListener("click", () =>  {
   const length = +passwordLengthEl.value;
   const checkLower = lowerCaseEl.checked;
   const checkUpper = upperCaseEl.checked;
@@ -35,7 +44,7 @@ generateEl.addEventListener("click", () =>  {
   const checkSpecialChar = specialCharEl.checked;
 
   passwordEl.innerText = generatePassword(checkLower, checkUpper, checkNumbers, checkSpecialChar, length)
-})
+});
 
 // Generate Password Function
 function generatePassword(lower, upper, number, specialChar, length) {
