@@ -13,6 +13,8 @@ This random password generator is designed to generate a random password based o
     - Numbers
     - Symbols
 
+[Link to App](https://itzbigidy.github.io/passwordGen/)
+
 ## Usage
 
 To use the random password generator is very simple.
