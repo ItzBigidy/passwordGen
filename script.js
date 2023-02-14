@@ -63,7 +63,7 @@ function generatePassword(lower, upper, number, specialChar, length) {
   console.log(typesArr);
 
   if(length < 8 || length > 128) {
-    return "";
+    return "passwordLength must be set to a value from 8 - 128";
   }
 
   if(typesCount === 0) {
